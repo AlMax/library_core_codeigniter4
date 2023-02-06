@@ -6,7 +6,7 @@
     },
     "autoload" : {
         "psr-4" : {
-            "CoreLibrary\\" : "src/"
+            "CoreLibrary\\" : "src/Core"
         }
     }
 }
