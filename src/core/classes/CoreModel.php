@@ -2,16 +2,19 @@
 
 use CodeIgniter\Model;
 
-abstract class CoreModel extends Model
+abstract class CoreModel
 {
-    protected $table;
-    protected $allowedFields;
-    protected $useSoftDeletes;
-    protected $useTimestamps = true;
-    protected $returnType = 'array';
+    private string $type;
 
-    public function __construct($db = null)
+    public function __construct(
+        $type = 'class'
+    )
     {
-        parent::__construct($db);
+        $this->type = $type;
+
+        return match ($this->type) {
+            'codeigniter' => new Model(),
+            default => $this,
+        };
     }
 }
