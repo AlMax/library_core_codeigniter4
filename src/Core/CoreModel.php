@@ -1,6 +1,6 @@
 <?php
 
-namespace CoreLibrary;
+namespace CoreLibrary\Core;
 
 use CodeIgniter\Model;
 
