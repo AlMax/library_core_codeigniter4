@@ -12,9 +12,11 @@ abstract class CoreModel
     {
         $this->type = $type;
 
-        return match ($this->type) {
-            'codeigniter' => new Model(),
-            default => $this,
-        };
+        switch ($this->type) {
+            case 'codeigniter':
+                return new Model();
+        }
+
+        return $this;
     }
 }
