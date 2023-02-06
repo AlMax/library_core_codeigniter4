@@ -1,5 +1,7 @@
 <?php
 
+namespace CoreLibrary;
+
 use CodeIgniter\Model;
 
 abstract class CoreModel
