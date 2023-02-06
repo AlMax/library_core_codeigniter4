@@ -1,4 +1,9 @@
 {
     "name": "almax/library_core_codeigniter4",
-    "type": "library"
+    "type": "library",
+    "autoload" : {
+        "psr-4" : {
+            "CoreLibrary\\" : "src/"
+        }
+    }
 }

@@ -2,7 +2,7 @@
 
 namespace AbstractCore;
 
-abstract class CoreController extends CodeIgniter\RESTful\ResourceController
+abstract class CoreController
 {
 
 }
