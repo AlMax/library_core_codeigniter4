@@ -27,11 +27,13 @@ abstract class CoreModel_codeigniter extends Model
         string               $table,
         array                $allowedFields,
         string               $softDeletesField = null,
+        $returnType = 'object',
         ?ConnectionInterface $db = null
     )
     {
         $this->table = $table;
         $this->allowedFields = $allowedFields;
+        $this->returnType = $returnType;
         if ($softDeletesField !== null) {
             self::setSoftDeletes($softDeletesField);
         }
