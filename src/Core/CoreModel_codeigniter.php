@@ -26,8 +26,8 @@ abstract class CoreModel_codeigniter extends Model
     public function __construct(
         string               $table,
         array                $allowedFields,
+                             $returnType = 'object',
         string               $softDeletesField = null,
-        $returnType = 'object',
         ?ConnectionInterface $db = null
     )
     {
