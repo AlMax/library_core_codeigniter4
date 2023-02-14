@@ -10,10 +10,13 @@ abstract class CoreModel_codeigniter extends Model
 {
     protected $table = '';
     protected $primaryKey = 'id';
+    protected $useAutoIncrement = true;
     protected $allowedFields = [];
     protected $useTimestamps = true;
 
     protected $returnType = 'object';
+    protected $dateFormat = 'int'; // 'datetime', 'date', 'int'
+
     protected $createdField = 'created_at';
     protected $updatedField = 'updated_at';
 
